@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>컴퓨터코리아 | USD/KRW 환율 대시보드</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--ink:#172033;--muted:#69758a;--line:#e7edf5;--blue:#2457d6;--blue2:#eaf0ff;--red:#d94b58;--green:#14805e}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,"Malgun Gothic",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:32px 22px 48px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:24px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase}
+h1{font-size:27px;margin:8px 0 6px} .sub{color:var(--muted);font-size:14px}
+.stamp{font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);padding:9px 12px;border-radius:10px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 5px 18px rgba(22,40,80,.035)}
+.card h2{font-size:15px;margin:0 0 18px}
+.mainrate{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.rate{font-size:42px;font-weight:750;letter-spacing:-1.5px}
+.unit{font-size:14px;color:var(--muted);padding-bottom:8px}
+.change{font-size:14px;color:var(--red);font-weight:700;padding-bottom:9px}
+.meta{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap}
+.meta small{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+.meta strong{font-size:17px}
+.chartbox{margin-top:18px}
+.chartbox svg{width:100%;height:auto;display:block}
+.chartlabels{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:2px}
+.side{display:grid;gap:18px}
+.field{display:flex;gap:8px;align-items:center;margin:14px 0}
+input{width:100%;min-width:0;border:1px solid #d9e1ed;border-radius:10px;padding:12px 13px;font-size:16px;color:var(--ink);background:#fff}
+.result{font-size:29px;font-weight:750;margin:8px 0 4px;word-break:break-word}
+.note{font-size:12px;line-height:1.6;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:12px 8px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{font-size:12px;color:var(--muted);font-weight:600}
+.schedule{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.time{background:#f7f9fd;border:1px solid var(--line);border-radius:12px;padding:13px}
+.time strong{display:block;font-size:17px;margin-bottom:5px}
+.time span{font-size:11px;color:var(--muted)}
+.footer{margin-top:18px;font-size:11px;color:var(--muted);line-height:1.7}
+.pill{display:inline-block;background:var(--blue2);color:var(--blue);padding:5px 9px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}header{display:block}.stamp{display:inline-block;margin-top:14px}.rate{font-size:36px}.wrap{padding:22px 14px 36px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <div><div class="eyebrow">COMPUTER KOREA · FINANCE</div><h1>USD / KRW 환율 대시보드</h1><div class="sub">미국 달러 기준 원화 환산 및 환율 흐름 확인</div></div>
+ <div class="stamp">기준 시각 · 2026.11.09 15:56 KST</div>
+</header>
+
+<div class="grid">
+ <section class="card">
+  <div class="pill">참고 환율 스냅샷</div>
+  <h2>미국 달러 → 대한민국 원</h2>
+  <div class="mainrate"><div class="rate">₩1,347.36</div><div class="unit">KRW / 1 USD</div><div class="change">▼ ₩16.50 (−1.21%)</div></div>
+  <div class="meta">
+   <div><small>당일 고가</small><strong>₩1,364.15</strong></div>
+   <div><small>당일 저가</small><strong>₩1,341.32</strong></div>
+   <div><small>전일 기준</small><strong>₩1,363.87</strong></div>
+  </div>
+  <div class="chartbox">
+   <h2 style="margin:24px 0 8px">최근 환율 흐름</h2>
+   <svg viewBox="0 0 680 220" role="img" aria-label="최근 USD KRW 환율 추이 차트">
+    <defs><linearGradient id="area" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2457d6" stop-opacity=".20"/><stop offset="1" stop-color="#2457d6" stop-opacity="0"/></linearGradient></defs>
+    <g stroke="#e8edf5" stroke-width="1"><line x1="45" y1="25" x2="660" y2="25"/><line x1="45" y1="75" x2="660" y2="75"/><line x1="45" y1="125" x2="660" y2="125"/><line x1="45" y1="175" x2="660" y2="175"/></g>
+    <g fill="#7b8799" font-size="11"><text x="4" y="29">1,370</text><text x="4" y="79">1,355</text><text x="4" y="129">1,340</text><text x="4" y="179">1,325</text></g>
+    <path d="M45 147 L147 105 L249 110 L351 121 L453 65 L555 45 L657 101 L657 175 L45 175Z" fill="url(#area)"/>
+    <polyline points="45,147 147,105 249,110 351,121 453,65 555,45 657,101" fill="none" stroke="#2457d6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#fff" stroke="#2457d6" stroke-width="3"><circle cx="45" cy="147" r="4"/><circle cx="147" cy="105" r="4"/><circle cx="249" cy="110" r="4"/><circle cx="351" cy="121" r="4"/><circle cx="453" cy="65" r="4"/><circle cx="555" cy="45" r="4"/><circle cx="657" cy="101" r="5"/></g>
+   </svg>
+   <div class="chartlabels"><span>10/30</span><span>11/02</span><span>11/03</span><span>11/04</span><span>11/05</span><span>11/06</span><span>11/09</span></div>
+  </div>
+ </section>
+
+ <div class="side">
+  <section class="card">
+   <h2>달러 → 원화 환산 계산기</h2>
+   <div class="note">환산할 USD 금액을 입력하세요.</div>
+   <div class="field"><input id="usd" type="number" min="0" step="0.01" value="1000" aria-label="미국 달러 금액"><span>USD</span></div>
+   <div class="note">적용 환율: ₩1,347.36 / USD</div>
+   <div class="result" id="krw">₩1,347,360</div>
+   <div class="note">※ 수수료 및 은행별 매매기준율 차이는 반영되지 않습니다.</div>
+  </section>
+  <section class="card">
+   <h2>주요 금액 환산표</h2>
+   <table><thead><tr><th>USD</th><th>KRW</th></tr></thead><tbody id="quick"></tbody></table>
+  </section>
+ </div>
+</div>
+
+<section class="card" style="margin-top:18px">
+ <h2>환율 확인 및 이메일 발송 일정</h2>
+ <div class="schedule">
+  <div class="time"><strong>09:30</strong><span>오전 환율 안내</span></div>
+  <div class="time"><strong>13:30</strong><span>오후 환율 안내</span></div>
+  <div class="time"><strong>17:30</strong><span>마감 전 환율 안내</span></div>
+ </div>
+ <p class="note" style="margin:14px 0 0">정기 이메일 발송은 별도로 설정된 자동화 일정입니다. 이 HTML 파일 자체는 자동 갱신되거나 이메일을 발송하지 않습니다.</p>
+</section>
+<div class="footer">
+ 데이터 기준: 2026.11.09 15:56 KST에 확인한 참고 시세 및 최근 이력. 현재 시세가 아니며, 파일을 열어도 자동으로 최신화되지 않습니다.<br>
+ 실제 송금·결제·매입 적용 시에는 거래 은행 또는 금융기관의 적용 환율을 확인하세요. 참고 출처: GoldPriceZ.
+</div>
+</div>
+<script>
+const rate = 1347.36;
+const fmt = n => new Intl.NumberFormat('ko-KR',{maximumFractionDigits:0}).format(n);
+const usd = document.getElementById('usd');
+const krw = document.getElementById('krw');
+function update(){const v=Math.max(0,Number(usd.value)||0);krw.textContent='₩'+fmt(v*rate);}
+usd.addEventListener('input',update);
+const amounts=[100,500,1000,5000,10000,50000,100000];
+document.getElementById('quick').innerHTML=amounts.map(v=>`<tr><td>$${fmt(v)}</td><td>₩${fmt(v*rate)}</td></tr>`).join('');
+update();
+</script>
+</body>
+</html>
